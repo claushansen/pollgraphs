@@ -376,6 +376,7 @@ function pollgraphs_theme_registry_alter(&$theme_registry){
 *
 */
  function getChartScript($final, $type = 'PieChart', $title = 'poll results', $width='100%', $height='400px'){
+
   $chartarr = array();
   $chartarr[] = array('Question', 'Answer');
   foreach($final as $choice){

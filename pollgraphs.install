@@ -58,6 +58,7 @@ function pollgraphs_install() {
 				),
 			'deleted' => '0',
 			'description' => $t('Choose witch type of chart you would like to display.'),
+			// setting display of our field to hidden as it is only for our use and not for the enduser to see
 			'display' => array(
 				'default' => array(
 					'label' => 'hidden',
@@ -102,6 +103,14 @@ function pollgraphs_install() {
 	
  }//end hook_install
 
+
+/*
+* Implements hook_uninstall()
+*
+* This implementaion of hook_uninstall makes sure that we removes our custom field
+* when uninstalling our pollgraphs module
+*
+*/
 
  function pollgraphs_uninstall() { 
 

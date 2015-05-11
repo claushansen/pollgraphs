@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Default template for an advanced poll bar - based on default Drupal Poll template.
+ * Template for an Pollgraphs Google Pie Chart 
  *
  * Variables available:
  * - $title: The title of the poll.
@@ -17,15 +17,12 @@ if ($voted) {
     $voted_class = ' voted';
 }
 //drupal_add_js('https://www.google.com/jsapi', 'external');
-print $chart;
+//print $chart;
 ?>
 
-<h2>Piechart</h2>
-<div class="total"><?php print t('Total votes: @total', array('@total' => $total)); ?></div>
-<?php print_r($items); ?> 
 <div class="poll" id="advpoll-<?php print $nid; ?>">
 <div class="col-md-12">
-<div id="chartdiv" style="width:100%; height:400px;"> piechart</div>
+<?php print $chart; ?>
 </div>    
     <div class="total"><?php print t('Total votes: @total', array('@total' => $total)); ?></div>
 
@@ -34,5 +31,5 @@ print $chart;
     <?php endif; ?>
     
     <?php print $cancel_form; ?>
-    <script>drawChart();</script>
+    
 </div>
